@@ -1,4 +1,4 @@
-name: PHP Composer
+name: TEST
 
 on: [push]
 
@@ -9,9 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
