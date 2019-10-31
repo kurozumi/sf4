@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b47e50-6491-4df9-b1e5-a490a41ef39d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/php.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/php.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sf4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sf4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.github/workflows/php.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="338">
+              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -171,8 +168,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="720" />
     <option name="height" value="823" />
@@ -247,26 +243,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572492561232</updated>
-      <workItem from="1572492562640" duration="573000" />
+      <workItem from="1572492562640" duration="942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="573000" />
+    <option name="totallyTimeSpent" value="942000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="823" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="DB Browser" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24926254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12088698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49557522" visible="true" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49557522" visible="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50442475" side_tool="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -305,8 +301,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.github/workflows/php.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="338">
+          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
         </state>
       </provider>
     </entry>
