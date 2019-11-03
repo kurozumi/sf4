@@ -29,6 +29,11 @@ class Sample
      */
     private $datetime;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $kana;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,6 +59,18 @@ class Sample
     public function setDatetime(\DateTimeInterface $datetime): self
     {
         $this->datetime = $datetime;
+
+        return $this;
+    }
+
+    public function getKana(): ?string
+    {
+        return $this->kana;
+    }
+
+    public function setKana(string $kana): self
+    {
+        $this->kana = $kana;
 
         return $this;
     }

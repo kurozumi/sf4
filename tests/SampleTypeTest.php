@@ -43,6 +43,19 @@ class SampleTypeTest extends TypeTestCase
         }
     }
 
+    public function testSubmitNameInvalidData()
+    {
+        $formData = [
+            "name" => "",
+        ];
+
+        $form = $this->factory->create(SampleType::class);
+
+        $form->submit($formData);
+
+        $this->assertFalse($form->isValid());
+    }
+
     protected function getExtensions()
     {
         $validator = Validation::createValidator();
