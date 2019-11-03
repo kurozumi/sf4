@@ -34,4 +34,15 @@ class SampleControllerTest extends WebTestCase
 
         $this->assertResponseRedirects("/sample", 302);
     }
+
+    public function testContactErrorMessage()
+    {
+        $crawler = $this->client->request("GET", "/contact");
+
+        $form = $crawler->selectButton('Submit')->form();
+        $this->client->submit($form);
+
+        $this->assertResponseIsSuccessful();
+    }
+
 }
