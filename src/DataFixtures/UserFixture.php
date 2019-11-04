@@ -19,9 +19,9 @@ class UserFixture extends Fixture
 //    ){
 //        $this->passwordEncoder = $passwordEncoder;
 //    }
-//
-//    public function load(ObjectManager $manager)
-//    {
+
+    public function load(ObjectManager $manager)
+    {
 //        $password = $this->passwordEncoder->encodePassword("password");
 //
 //        $user = new User();
@@ -31,5 +31,5 @@ class UserFixture extends Fixture
 //
 //        $manager->persist($user);
 //        $manager->flush();
-//    }
+    }
 }
