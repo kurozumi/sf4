@@ -47,13 +47,15 @@ class UserControllerTest extends WebTestCase
         $user = $this->entityManager
             ->getRepository(User::class)->find(1);
 
-        $token = new UsernamePasswordToken($user, null, $firewallName, ["ROLE_USER"]);
+        if($user instanceof User) {
+            $token = new UsernamePasswordToken($user, null, $firewallName, ["ROLE_USER"]);
 
-        $this->session->set('_security_' . $firewallContext, serialize($token));
-        $this->session->save();
+            $this->session->set('_security_' . $firewallContext, serialize($token));
+            $this->session->save();
 
-        $cookie = new Cookie($this->session->getName(), $this->session->getId());
-        $this->client->getCookieJar()->set($cookie);
+            $cookie = new Cookie($this->session->getName(), $this->session->getId());
+            $this->client->getCookieJar()->set($cookie);
+        }
     }
 
     protected function generateUrl($route, $parameters = [], $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH)
