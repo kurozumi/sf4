@@ -10,8 +10,8 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_USER: root
-          MYSQL_ROOT_PASSWORD: password
+#          MYSQL_ROOT_USER: root
+#          MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: symfony
         ports:
           - 3306
@@ -38,11 +38,11 @@ jobs:
           composer require symfony/orm-pack
           php bin/console doctrine:schema:update --force || echo "No migrations found or schema update failed"
           php bin/console doctrine:migrations:migrate || echo "No migrations found or migration failed"
-        env:
-          DATABASE_URL: mysql://root:password@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony
+#        env:
+#          DATABASE_URL: mysql://root:password@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony
       - name: Run Tests
         run: |
           composer require phpunit
           php bin/phpunit --coverage-text
-        env:
-          DATABASE_URL: mysql://root:password@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony
+#        env:
+#          DATABASE_URL: mysql://root:password@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony
