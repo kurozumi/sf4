@@ -1,4 +1,4 @@
-<?php namespace App\Tests;
+<?php namespace App\Tests\Codeception;
 use App\Tests\AcceptanceTester;
 
 class FirstCest
