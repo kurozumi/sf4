@@ -14,22 +14,22 @@ class UserFixture extends Fixture
      */
     private $passwordEncoder;
 
-    public function __construct(
-        PasswordEncoderInterface $passwordEncoder
-    ){
-        $this->passwordEncoder = $passwordEncoder;
-    }
-
-    public function load(ObjectManager $manager)
-    {
-        $password = $this->passwordEncoder->encodePassword("password");
-
-        $user = new User();
-        $user->setUsername("user");
-        $user->getPassword($password);
-        $user->setRoles(["ROLE_USER"]);
-
-        $manager->persist($user);
-        $manager->flush();
-    }
+//    public function __construct(
+//        PasswordEncoderInterface $passwordEncoder
+//    ){
+//        $this->passwordEncoder = $passwordEncoder;
+//    }
+//
+//    public function load(ObjectManager $manager)
+//    {
+//        $password = $this->passwordEncoder->encodePassword("password");
+//
+//        $user = new User();
+//        $user->setUsername("user");
+//        $user->getPassword($password);
+//        $user->setRoles(["ROLE_USER"]);
+//
+//        $manager->persist($user);
+//        $manager->flush();
+//    }
 }
