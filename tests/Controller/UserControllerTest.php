@@ -2,6 +2,7 @@
 
 namespace App\Tests\Controller;
 
+use App\DataFixtures\UserFixture;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
@@ -27,6 +28,7 @@ class UserControllerTest extends WebTestCase
         $this->session = $this->client->getContainer()->get('session');
         $this->entityManager = $container->get('doctrine')->getManager();
         $this->router = $container->get('router');
+
     }
 
     public function testLoginSuccess()
@@ -45,7 +47,9 @@ class UserControllerTest extends WebTestCase
         $firewallContext = "main";
 
         $user = $this->entityManager
-            ->getRepository(User::class)->find(1);
+            ->getRepository(User::class)->findOneBy(["username" => UserFixture::USERNAME]);
+
+        var_dump($user->getUsername());
 
         if($user instanceof User) {
             $token = new UsernamePasswordToken($user, null, $firewallName, ["ROLE_USER"]);
