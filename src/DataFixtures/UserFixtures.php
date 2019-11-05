@@ -33,7 +33,7 @@ class UserFixtures extends Fixture
         $user->setRoles(self::ROLES);
 
         $password = $this->passwordEncoder->encodePassword($user, self::PASSWORD);
-        $user->getPassword($password);
+        $user->setPassword($password);
 
         $manager->persist($user);
         $manager->flush();
