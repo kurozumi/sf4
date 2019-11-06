@@ -5,7 +5,7 @@ namespace App\Tests\Form\Type;
 use App\Entity\Sample;
 use App\Form\SampleType;
 
-class SampleTypeTest extends AbstractTypeTestCase
+class SampleTypeTest extends BaseTypeTestCase
 {
     public function testSubmitValidData()
     {

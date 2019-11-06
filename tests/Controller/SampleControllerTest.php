@@ -2,7 +2,7 @@
 
 namespace App\Tests\Controller;
 
-class SampleControllerTest extends AbstractWebTestCase
+class SampleControllerTest extends BaseWebTestCase
 {
     public function testSomething()
     {

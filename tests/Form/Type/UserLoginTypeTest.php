@@ -4,7 +4,7 @@ namespace App\Tests\Form\Type;
 
 use App\Form\UserLoginType;
 
-class UserLoginTypeTest extends AbstractTypeTestCase
+class UserLoginTypeTest extends BaseTypeTestCase
 {
     public function testSubmitValidData()
     {

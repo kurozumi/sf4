@@ -66,7 +66,7 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-        "test": ["./bin/phpunit --coverage-text"],
+        "test": ["./bin/console doctrine:fixture:load | ./bin/phpunit --coverage-text"],
         "post-install-cmd": [
             "@auto-scripts"
         ],

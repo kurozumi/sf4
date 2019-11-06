@@ -11,7 +11,7 @@ use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
-class AbstractWebTestCase extends WebTestCase
+abstract class BaseWebTestCase extends WebTestCase
 {
     protected $client = null;
 

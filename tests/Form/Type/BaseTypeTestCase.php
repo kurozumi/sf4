@@ -8,7 +8,7 @@ use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
 use Symfony\Component\Form\Test\TypeTestCase;
 use Symfony\Component\Validator\Validation;
 
-class AbstractTypeTestCase extends TypeTestCase
+abstract class BaseTypeTestCase extends TypeTestCase
 {
     protected function getExtensions()
     {

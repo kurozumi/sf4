@@ -4,7 +4,7 @@ namespace App\Tests\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 
-class UserControllerTest extends AbstractWebTestCase
+class UserControllerTest extends BaseWebTestCase
 {
     public function testLoginSuccess()
     {
