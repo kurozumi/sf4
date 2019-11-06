@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Tests;
+namespace App\Tests\Form\Type;
 
 use App\Entity\Sample;
 use App\Form\SampleType;
-use Symfony\Component\Form\Test\TypeTestCase;
-use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
-use Symfony\Component\Validator\Validation;
 
-class SampleTypeTest extends TypeTestCase
+class SampleTypeTest extends AbstractTypeTestCase
 {
     public function testSubmitValidData()
     {
@@ -54,19 +51,5 @@ class SampleTypeTest extends TypeTestCase
         $form->submit($formData);
 
         $this->assertFalse($form->isValid());
-    }
-
-    protected function getExtensions()
-    {
-        $validator = Validation::createValidator();
-
-        // if you also need to read constraints from annotations
-//        $validator = Validation::createValidatorBuilder()
-//            ->enableAnnotationMapping()
-//            ->getValidator();
-
-        return [
-            new ValidatorExtension($validator)
-        ];
     }
 }

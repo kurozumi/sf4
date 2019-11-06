@@ -2,17 +2,8 @@
 
 namespace App\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class SampleControllerTest extends WebTestCase
+class SampleControllerTest extends AbstractWebTestCase
 {
-    private $client;
-
-    public function setUp(): void
-    {
-        $this->client = static::createClient();
-    }
-
     public function testSomething()
     {
         $crawler = $this->client->request('GET', '/sample');
