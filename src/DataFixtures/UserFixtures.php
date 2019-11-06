@@ -11,7 +11,7 @@ class UserFixtures extends Fixture
 {
     public const USERNAME = "username";
 
-    public const PASSWORD = "password";
+    public const PASSWORD = "pass";
 
     public const ROLES = ["ROLE_USER"];
 

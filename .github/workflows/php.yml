@@ -43,7 +43,6 @@ jobs:
       - name: Run Tests
         run: |
           composer require phpunit
-          php bin/console doctrine:fixture:load
-          php bin/phpunit --coverage-text
+          composer test
         env:
           DATABASE_URL: mysql://root:password@127.0.0.1:${{ job.services.mysql.ports['3306'] }}/symfony

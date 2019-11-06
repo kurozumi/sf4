@@ -6,7 +6,21 @@ use App\Form\UserLoginType;
 
 class UserLoginTypeTest extends BaseTypeTestCase
 {
-    public function testSubmitValidData()
+    public function test正しいデータを送信()
+    {
+        $formData = [
+            "username" => "username",
+            "password" => "pass"
+        ];
+
+        $form = $this->factory->create(UserLoginType::class);
+
+        $form->submit($formData);
+
+        $this->assertTrue($form->isValid());
+    }
+
+    public function testパスワードチェック()
     {
         $formData = [
             "username" => "username",
@@ -17,6 +31,6 @@ class UserLoginTypeTest extends BaseTypeTestCase
 
         $form->submit($formData);
 
-        $this->assertTrue($form->isValid());
+        $this->assertFalse($form->isValid());
     }
 }
